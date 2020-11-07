@@ -1,0 +1,122 @@
+/*---   GENERAL    ---- */
+body {
+  font-family: 'RobotoDraft', 'Helvetica Neue', Helvetica, Arial;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 100vw;
+}
+
+/*---   HEADER    ---- */
+header {
+  height: auto;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.topHeader {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: 250px;
+}
+
+.dropdownMenu {
+  display: none;
+}
+
+.hamburger {
+  height: 45px;
+}
+
+.navigationHeader {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.navigationHeader nav ul li {
+  width: 100%;
+}
+
+.navigationHeader nav ul li a {
+  font-size: 1.6em;
+}
+
+input[type='checkbox'] ~ .nav {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ nav {
+  display: block;
+}
+
+@media screen and (min-width: 940px) {
+  /* ---   Header   --- */
+  .hamburger {
+    display: none;
+  }
+  /* Mettre le header en ligne*/
+  header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .navigationHeader {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  input[type='checkbox'] ~ .nav {
+    display: block;
+  }
+  input[type='checkbox'] ~ .nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .nav li a {
+    margin: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

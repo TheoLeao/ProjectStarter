@@ -1,0 +1,298 @@
+/*---   RESET    ---- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'RobotoDraft', 'Helvetica Neue', Helvetica, Arial;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/*---   GENERAL    ---- */
+
+.container {
+    width: 100vw;
+}
+
+
+/*---   HEADER    ---- */
+
+header {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px
+}
+
+.logo {
+    height: 60px;
+    width: 250px;
+}
+
+.dropdownMenu {
+    display: none;
+}
+
+.hamburger {
+    height: 45px;
+}
+
+.navigationHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.navigationHeader nav ul li {
+    width: 100%;
+}
+
+.navigationHeader nav ul li a {
+    font-size: 1.6em;
+}
+
+input[type='checkbox']~.nav {
+    display: none;
+}
+
+input[type='checkbox']:checked~nav {
+    display: block;
+}
+
+
+/*---   REGION TOP    ---- */
+
+
+/* Article principal*/
+
+.articlePrincipal article {
+    display: flex;
+    position: relative;
+    height: auto;
+}
+
+.articlePrincipal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    -webkit-object-fit: cover
+}
+
+.articlePrincipal img~div {
+    /* Position */
+    height: auto;
+    max-height: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Style */
+    background-color: #ff6f43;
+    opacity: 0.9;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.articlePrincipal img~div a,
+p {
+    color: white;
+}
+
+
+/* Articles secondaire */
+
+.articlesSecondaire {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articlesSecondaire article a {
+    color: white;
+}
+
+.articlesSecondaire article {
+    margin-top: 0px;
+}
+
+.articlesSecondaire article h2 {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.articlesSecondaire article {
+    width: 100%;
+    padding: 20px;
+}
+
+.articlesSecondaire article:nth-child(1) {
+    background-color: #c62828;
+}
+
+.articlesSecondaire article:nth-child(2) {
+    background-color: #5c6bc0;
+}
+
+.tags {
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+}
+
+
+/* Articles flux */
+
+.articlesFlux {
+    display: flex;
+    flex-direction: column;
+}
+
+.articlesFlux article {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    overflow: hidden;
+    margin: 20px
+}
+
+.articlesFlux article img {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.articlesFlux img~div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.articlesFlux h2 {
+    font-size: 1.2em;
+}
+
+.articlesFlux article div p {
+    color: black;
+    overflow: hidden;
+    line-height: 1.2em;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 3.6em;
+}
+
+.articlesFlux .tags {
+    display: none;
+}
+
+
+/* Contact */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    height: 20px;
+    border-color: #DDDDDD;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    background-color: #5777fc;
+    width: 40%;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    margin: 35px auto;
+    color: white;
+}
+
+@media screen and (min-width:940px) {
+    /* ---   Header   --- */
+    .hamburger {
+        display: none;
+    }
+    /* Mettre le header en ligne*/
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navigationHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    input[type='checkbox']~.nav {
+        display: block
+    }
+    input[type='checkbox']~.nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav li a {
+        margin: 30px;
+    }
+    /* --- Region TOP --- */
+    .regionTop {
+        display: flex;
+        flex-direction: row;
+        background-color: red;
+        height: 600px;
+    }
+    .articlePrincipal article {
+        height: 100%;
+        padding: 0px;
+    }
+    .articlesSecondaire {
+        flex-grow: 0.5;
+        display: flex;
+        flex-direction: column;
+    }
+    .articlesSecondaire article {}
+    .regionTop a {
+        text-decoration: none;
+        color: white;
+    }
+}
